@@ -31,7 +31,7 @@
       <li role="presentation"><a href="#optimization" aria-controls="optimization" role="tab" data-toggle="tab"><div class="border-line"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/avioneta.png" alt=""></div>
      
         </a></li>
-      <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><div class="border-line"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cohete.png" alt=""></div>
+      <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><div class="border-line"><img style="width: 55px;" src="<?php echo get_template_directory_uri(); ?>/assets/img/cohete.png" alt=""></div>
    
         </a></li>
      

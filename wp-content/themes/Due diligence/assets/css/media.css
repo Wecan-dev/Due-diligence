@@ -9,11 +9,46 @@
 .terminos h3:after{
     display: none;
 }
+
+.block-first{
+    display: block;
+}
+
+.img-card-principal img{
+    width: 100%;
+}
+.tab-education ul.nav.nav-tabs{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.mancha7{
+    display: none;
+}
 .modal-dialog {
     margin-top: 40%;
 }
+
+.education h2 {
+    text-align: center;
+    font-size: 35px;
+}
 .responsive-menu-btn {
     width: 50%;
+}
+
+.flex-blog{
+    display: block;
+}
+
+.flex-blog2{
+    display: block;
+}
+
+.card-blog{
+    display: flex;
 }
 
 .text-video h4 {
@@ -85,6 +120,10 @@
 .mancha2{
     display: none;
 }
+
+.slick-dots .multiple-items{
+    width: 90%;
+}
 .clients h2 {
 
     padding: 7px;
@@ -101,6 +140,8 @@
 
 .flex-solutions{
     display: block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .pricing h3 {
@@ -116,6 +157,11 @@ span.price-span {
     border-radius: 10px;
     color: #fff;
     font-size: 20px;
+}
+
+.btn_custom{
+    height: auto;
+    width: auto;
 }
 .title-flex {
 
@@ -239,7 +285,72 @@ section.about{
 
 .header__main {
     display: flex;
-    padding: 1rem;
+    padding: 1rem!important;
+}
+
+.header2 .nav__menu {
+    justify-content: center;
+}
+
+.text-card_blog{
+    height: auto;
+}
+
+.flex-blog2 .blog-item .img-card img{
+    height: auto;
+}
+
+.nav-item3 {
+
+    margin-bottom: 7%;
+}
+
+.mancha8{
+    display: none;
+}
+
+section.free {
+
+    padding-left: 50px;
+} 
+
+.mancha5{
+    display: none;
+}
+
+.mancha9{
+    display: none;
+}
+.mancha10{
+    display: none;
+}
+.flex-blog2 .blog-item{
+    width: auto;
+}
+
+.text-card_blog h3{
+    font-size: 20px;
+}
+.blog-item {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.text-blog {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.text-blog h3 {
+    font-size: 25px;
+}
+
+.header2 a.logo-main {
+    width: 130%;
+}
+
+section.education {
+    padding-top: 150px;
 }
 
 .video-flex{
@@ -423,8 +534,12 @@ form#contact{
  display: block;
  padding: 40px;
 }
-
-
+.articles .flex-blog2{
+    padding-top: 20%!important;
+}
+.title-header h2 {
+    font-size: 40px;
+}
  .footer-ub{
      width: auto;
  }
@@ -436,10 +551,130 @@ form#contact{
  .redes{
      width: auto;
  }
+ .multiple-items .slick-dots{
+    left: 0;
+    right: 0;
 }
 
 
+.articles {
+    background: #ebebeb;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.interna-flex{
+    display: block;
+}
+.box-info{
+    width: auto;
+    position: inherit;
+    margin-bottom: 10%;
+    height: auto;
+}
+.box-text h3 {
+    color: #fff;
+    font-size: 20px;
+}
+.interna-blog h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.text-interna{
+    width: auto;
+}
+
+.text-interna img{
+    width: 100%;
+}
+
+.box-img {
+    width: auto;
+    display: none;
+}
+
+.box-text{
+    width: auto;
+}
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
+    .logo-main img {
+        margin-top: 1%;
+        width: 50%;
+    }
+    .btn_custom2{
+        height: auto;
+        width: auto;
+    }
+
+    .text-interna img{
+        width: 100%;
+    }
+    .box-img {
+        width: 70%;
+    }
+    .box-text h3 {
+        color: #fff;
+        font-size: 20px;
+    }
+    .flex-blog2 .blog-item {
+        width: 47%;
+    }
+    .btn_custom{
+        height: auto;
+        width: auto;
+    }
+    .img-card-principal img{
+        width: 300px;
+    }
+    .mancha8{
+        display: none;
+    }
+
+    .header2 a.logo-main {
+        width: 55%;
+    }
+
+    #search.active {
+        width: 350px;
+        margin-top: 15%;
+        padding-bottom: 50px;
+    }
+    
+    .tab-education ul.nav.nav-tabs {
+        background: #ebebeb!important;
+        width: 100%;
+    }
+    .mancha5{
+        display: none;
+    }
+    
+    .mancha9{
+        display: none;
+    }
+    .mancha10{
+        display: none;
+    }
+    .flex-blog2 .blog-item {
+        width: 48%;
+    }
+
+    .flex-blog2 .blog-item .img-card img {
+        width: 100%;
+        height: 30vh;
+    }
+    .text-blog h3 {
+        font-size: 27px;
+    }
+
+    .text-card_blog {
+        text-align: center;
+        padding: 70px 20px;
+        background: #fff;
+        height: 30vh;
+    }
 
     .main-banner .mask .main-banner__text .main-banner__description {
         font-size: 18px;
@@ -689,8 +924,8 @@ section#about {
     display: flex;
     position: absolute;
     bottom: 0;
-    right: 4.4%!important;
-    width: 5%!important;
+    right: 4.8%!important;
+    width: 4%!important;
     justify-content: center;
     align-items: center;
     display: table-row;

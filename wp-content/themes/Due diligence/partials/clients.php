@@ -35,7 +35,7 @@
 <div class="client-card">
   <div class="circle1"></div>
   <div class="client-img">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cliente1.png" alt="">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cliente4.png" alt="">
   </div>
   <h5>Benito Noboa</h5>
   <div  class="card-text">

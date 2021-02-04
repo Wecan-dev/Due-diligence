@@ -36,7 +36,7 @@
         align-items: center;
         }
 
-        </style>
+        </style> 
 <body>
 
   <header class="header__main navbar-me back container-fluid">
@@ -71,7 +71,7 @@
     <a class="nav-link" href="#team">Our Team</a>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="#education">Education</a>
+    <a class="nav-link" href="<?php echo bloginfo('url');?>/index.php/education">Education</a>
   </div>
 
   <div class="nav-item">
