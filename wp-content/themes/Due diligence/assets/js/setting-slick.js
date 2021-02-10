@@ -12,7 +12,7 @@ $('.main-banner__content').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: false
+        dots: true
       }
     },
     {
@@ -28,9 +28,9 @@ $('.main-banner__content').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         autoplay: true,
-        arrows: false,
+        arrows: true,
         autoplaySpeed: 5000
       }
     }

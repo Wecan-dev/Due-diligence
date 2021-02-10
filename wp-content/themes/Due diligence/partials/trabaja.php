@@ -1,5 +1,4 @@
-
-<section id="section1" class="work container">
+<section id="section1" class="work">
   <div class="work-flex">
     <div class="work-text">
       <h2>Trabajamos también <br> en América Latina  </h2>
