@@ -131,6 +131,37 @@ $('.multiple-items').slick({
         }
     ]
 });
+$('.how-flex').slick({
+    autoplay:true,
+    autoplaySpeed: 6000,
+    speed: 500,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    dots:false,
+    responsive: [
+        {
+            breakpoint: 700,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                verticalSwiping: false,
+                vertical: false,
+                slidesToScroll: 1,
+				 dots:true,
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+				 dots:true,
+            }
+        }
+    ]
+});
 
 $('.multiple-card').slick({
   autoplay:true,

@@ -3,7 +3,15 @@
 <div class="icon-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="">
 </div>
-<h2>Our Team</h2>
+	 <?php 
+		$lang = get_bloginfo('language');
+	    if( $lang == 'es-CO'): ?>
+			  <!-- ESPAÑOL -->
+<h2> Nuestro Equipo</h2>
+	<?php else: ?>
+			  <!-- INGLES-->
+	<h2>Our Team</h2>
+	<?php endif; ?>
 </div>
 <div class="line-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line26.png" alt="">
@@ -11,111 +19,34 @@
 
 
 <div class="multiple-card container">
+	<?php $args = array( 'post_type' => 'Team', ); ?>
+	<?php $loop = new WP_Query( $args ); ?>
+	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div class="item-card">
     <div class="item-img"> 
         <div class="red-social">
           <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tw.png" alt="">
+			  <a href="<?php the_field( 'redes_link' ); ?>">
+			    <img src="http://159.89.229.55/Due-diligence/wp-content/uploads/2021/03/linkedin-1.png">
+			  </a>
+           
           </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dribble.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/be.png" alt="">
-          </div>
+         
+
         </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team1.png" alt="">
+      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
     </div>
    
     <div class="text-card">
-      <h5>Beth Murphy</h5>
-      <p>UI UX Designer</p>
+      <h5><?php the_title(); ?></h5>
+        <?php the_content(); ?>
     </div>
   </div>
-  <div class="item-card">
-    <div class="item-img"> 
-        <div class="red-social">
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tw.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dribble.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/be.png" alt="">
-          </div>
-        </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team2.png" alt="">
-    </div>
+	<?php endwhile; ?>
+  
    
-    <div class="text-card">
-      <h5>Beth Murphy</h5>
-      <p>UI UX Designer</p>
-    </div>
-  </div>
-  <div class="item-card">
-    <div class="item-img"> 
-        <div class="red-social">
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tw.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dribble.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/be.png" alt="">
-          </div>
-        </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team3.png" alt="">
-    </div>
-   
-    <div class="text-card">
-      <h5>Beth Murphy</h5>
-      <p>UI UX Designer</p>
-    </div>
-  </div>
-  <div class="item-card">
-    <div class="item-img"> 
-        <div class="red-social">
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tw.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dribble.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/be.png" alt="">
-          </div>
-        </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team4.png" alt="">
-    </div>
-   
-    <div class="text-card">
-      <h5>Beth Murphy</h5>
-      <p>UI UX Designer</p>
-    </div>
-  </div>
-  <div class="item-card">
-    <div class="item-img"> 
-        <div class="red-social">
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tw.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dribble.png" alt="">
-          </div>
-          <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/be.png" alt="">
-          </div>
-        </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team1.png" alt="">
-    </div>
-   
-    <div class="text-card">
-      <h5>Beth Murphy</h5>
-      <p>UI UX Designer</p>
-    </div>
-  </div>
+    
+
 
 </div>
 </section>
