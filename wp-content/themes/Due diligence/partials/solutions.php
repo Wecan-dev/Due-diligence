@@ -1,33 +1,16 @@
+<?php wp_reset_postdata();?>
 <section id="solutions" class="solutions">
 <div class="title-flex">
 <div class="icon-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="">
 </div>
-	<?php 
-	$lang = get_bloginfo('language');
-	if( $lang == 'es-CO'): ?>
-	 <!-- ESPAÑOL -->
-<h2>
-Soluciones</h2>
- <?php else: ?>
-			  <!-- INGLES-->
-	<h2>Solutions</h2>
-	 <?php endif; ?>
+	<h2><?php the_field( 'title_solutions' ); ?><h2>
 </div>
 <div class="line-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line24.png" alt="">
 </div>
 <div class="p-text">
-	  <?php 
-		$lang = get_bloginfo('language');
-	    if( $lang == 'es-CO'): ?>
-			  <!-- ESPAÑOL -->
-  <p> 
-Incluye contabilidad en línea subcontratada, en tiempo real, con un equipo de contabilidad dedicado disponible.</p>
-	 <?php else: ?>
-			  <!-- INGLES-->
-	<p>  Includes out-sourced, real-time, online bookkeeping, with an available dedicated accounting team.</p>
-	  <?php endif; ?>
+	    <p><?php the_field( 'description_solutions' ); ?></p>
 	</div>
 <div class="flex-solutions  ">
 	<?php $args = array( 'post_type' => 'Solutions', ); ?>
@@ -40,20 +23,60 @@ Incluye contabilidad en línea subcontratada, en tiempo real, con un equipo de c
   <h5><?php the_title(); ?></h5>
   <?php the_content(); ?>
 </div>
-<?php endwhile; ?>
+<?php endwhile; wp_reset_postdata(); ?>
 
 
 
 
 </div>
 <div class="btn-center" style="margin-top: 2%;">
-	 <?php 
+	
+		<?php 
 		$lang = get_bloginfo('language');
 	    if( $lang == 'es-CO'): ?>
-			  <!-- ESPAÑOL -->
-<a class="btn_custom2" href="#">EMPEZAR AHORA</a>
-	<?php else: ?>
-	<a class="btn_custom2" href="#">Let's start now</a>
-	 <?php endif; ?>
+		<!-- ESPAÑOL -->
+	
+		<?php if ( get_field( 'seleccione_tipo_de__boton_soluciones' ) == 1 ) : ?>
+			<?php $popup_de_soluciones = get_field( 'popup_de_soluciones' ); ?>
+			<?php if ( $popup_de_soluciones ) : ?>
+				<a class="btn_custom2 btn-open-modal" data-toggle="modal" href="<?php echo esc_url( $popup_de_soluciones['url'] ); ?>" target="<?php echo esc_attr( $popup_de_soluciones['target'] ); ?>"><?php echo esc_html( $popup_de_soluciones['title'] ); ?></a>
+			<?php endif; ?>
+	
+	
+		<?php else : ?>
+		<?php $enlace_soluciones = get_field( 'enlace_soluciones' ); ?>
+		<?php if ( $enlace_soluciones ) : ?>
+			<a class="btn_custom2 btn-open-modal"  href="<?php echo esc_url( $enlace_soluciones['url'] ); ?>" target="<?php echo esc_attr( $enlace_soluciones['target'] ); ?>"><?php echo esc_html( $enlace_soluciones['title'] ); ?></a>
+		<?php endif; ?>
+	
+		<?php endif; ?>
+	
+	
+		
+		<?php else: ?>
+			<?php if ( get_field( 'select_solutions_type' ) == 1 ) : ?>
+				<?php $buttom_solutions = get_field( 'buttom_solutions' ); ?>
+			<?php if ( $buttom_solutions ) : ?>
+				<a class="btn_custom2 btn-open-modal" data-toggle="modal" href="<?php echo esc_url( $buttom_solutions['url'] ); ?>" target="<?php echo esc_attr( $buttom_solutions['target'] ); ?>"><?php echo esc_html( $buttom_solutions['title'] ); ?></a>
+			<?php endif; ?>
+	
+	
+			<?php else : ?>
+				<?php $link_solutions = get_field( 'link_solutions' ); ?>
+				<?php if ( $link_solutions ) : ?>
+					<a class="btn_custom2 btn-open-modal" href="<?php echo esc_url( $link_solutions['url'] ); ?>" target="<?php echo esc_attr( $link_solutions['target'] ); ?>"><?php echo esc_html( $link_solutions['title'] ); ?></a>
+				<?php endif; ?>
+			<?php endif; ?>
+	
+	
+ 		<?php endif; ?>
+	
+
+
+	
+	
+	
 </div>
 </section>
+	
+

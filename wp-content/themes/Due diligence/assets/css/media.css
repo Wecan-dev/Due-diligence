@@ -1,4 +1,52 @@
 @media (min-width: 0px) and (max-width: 767px) {
+	.linea img,.linea2 img, .line-pricing img{
+		width: 100px !important;
+	}
+	
+	.main-banner .main-banner__item {
+    position: relative;
+    height: 100vh;
+    padding: 0rem;
+}
+	.main-banner .main-banner__item:before{
+		position: absolute;
+		inset: 0;
+		content:'';
+		background: rgb(255 244 244 / 63%);
+	}
+	.elipse img{
+		transform: translate(-0%);
+	}
+	.text-header{
+		padding-left: 20px;
+	}
+	.title-header p {
+    font-weight: 600;
+    width: 80%;
+    color: white;
+}
+	.header-two a {
+    font-size: 40px !important;
+}
+	.img-single {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+	.block-first .card-first {
+    width: 100%;
+    object-fit: cover;
+}
+	.header__main, .header2 {
+    display: flex;
+    padding: 1.5rem 1.8rem;
+		
+	}
+	
+	.main-banner-img img{
+    width: 100%;
+    object-fit: cover;
+}
 	.slick-slider .slick-track, .slick-slider .slick-list{
     padding-bottom: 0 !important;
 	}
@@ -111,7 +159,7 @@
     section#section1 {
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 40px;
+        padding-top: 50px;
         padding-bottom: 50px;
     }
     .img-card-principal img{
@@ -136,8 +184,29 @@
         font-size: 35px;
     }
     .responsive-menu-btn {
-        width: 50%;
+       
+		display: flex;
+		justify-content: flex-end;
     }
+	.how-items:nth-child(4) .border-icon .how-icon{
+		background: #ff9100;
+    border-radius: 50%;
+    width: 96%;
+    padding: 15px;
+	}
+	.how-items:nth-child(4) .border-icon{
+		border: 1px solid #ff9100;
+		padding: 7px;
+	}
+	#slick-slide23 > div.how-center > div{
+		    border: 1px solid #fff;
+    padding: 0px;
+	}
+	#slick-slide23 > div.how-center > div > div{
+		padding: 0px;
+    background: transparent;
+    width: 100%;
+	}
     
     .flex-blog{
         display: block;
@@ -164,7 +233,7 @@
 		display: none;
     }
     
-    .multiple-card > .slick-prev {
+    .multiple-card > .slick-prev, .multiple-items > .slick-prev {
         z-index: 99;
         top: 37%;
         left: 3%;
@@ -224,6 +293,9 @@
 	.image-check__semana img{
     width: 20px;
 	}
+	.content-plan_adicional p:before{
+		background-size: 30px;
+	}
     .typewriter h1{
         margin: 0;
 		    width: 100%;
@@ -248,7 +320,7 @@
     
     
     .how h2 {
-        color: #fff;font-size: 30px;
+        color: #fff;font-size: 25px;
     }  
     .title-flex h2 {
         font-size: 25px;
@@ -291,8 +363,10 @@
         line-height: 1.8;
         margin-top: 15%;
         margin-bottom: 15%;
-    
-        font-size: 20px;
+    width: 100%;
+        font-size: 17px;
+		    left: 50%;
+    transform: translate(-50%);
     }
     span.price-span {
         background: #ff9100;
@@ -351,8 +425,8 @@
     }
     .work-text p {
     
-        margin-bottom: 10%;
-        margin-top: 10%;
+        margin-bottom: 8%;
+        margin-top: 5%;
     }
     
     
@@ -420,10 +494,7 @@
       
         background: rgb(0 0 0 / 60%);
     }
-    .logo-main img {
-        margin-top: 1%;
-        width: 95%;
-    }
+    
     .text-this img {
         width: 20%;
         filter: drop-shadow(2px 4px 6px black);
@@ -454,6 +525,7 @@
     .nav-item3 {
     
         margin-bottom: 7%;
+		padding: 0 10px;
     }
     
     .mancha8{
@@ -477,6 +549,7 @@
     }
     .flex-blog2 .blog-item{
         width: auto;
+		margin:0;
     }
     
     .text-card_blog h3{
@@ -496,9 +569,7 @@
         font-size: 25px;
     }
     
-    .header2 a.logo-main {
-        width: 130%;
-    }
+    
     
     section.education {
         padding-top: 150px;
@@ -624,7 +695,7 @@
     
             transform: rotate(360deg );
             right: 12px;
-            top: 35%;}
+            top: 37%;}
             .slick-next {
                 right: 12px;
             }
@@ -699,7 +770,7 @@
      padding: 40px;
     }
     .articles .flex-blog2{
-        padding-top: 20%!important;
+        padding-top: 0%!important;
     }
     .title-header h2 {
         font-size: 40px;
@@ -723,8 +794,8 @@
     
     .articles {
         background: #ebebeb;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     
     .interna-flex{
@@ -763,6 +834,24 @@
     }
     }
 @media (max-width: 991px) and (min-width: 768px){
+	.main-banner{
+		margin-top: 1rem;
+		height:50vh;
+	}
+	.header__main, .header2 {
+    display: flex;
+    padding: 1.5rem 1.8rem !important;
+		
+	}
+	
+	.main-banner-img img {
+    width: 250px;
+    object-fit: cover;
+}
+	.how-tittle{
+		min-height:60px;
+	}
+	
 	#works > div.main-works__flex > div > ul{
     bottom: 172px !important;
 	}
@@ -793,9 +882,44 @@
 	.main-banner .mask{
 		grid-template-columns: 1fr;
 	}
+	.text-banner__content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+	.typewriter h1 {
+    margin: 0;
+    margin-bottom: 10px;
+}
 	.main-banner .mask .main-banner__text .main-banner__description p{
-		    width: 60%;
+		    width: 35%;
 	}
+	.text-banner__content p{
+		font-size: 20px;
+    line-height: 30px;
+	}
+	.main-banner__content > .slick-next{
+		top: 80%;
+	}
+	.main-banner__content .slick-dots{
+		top: 69% !important;
+		right: 6%;
+	}
+	.work-text h2, .how h2, .title-flex h2 {
+    font-size: 25px !important;
+}
+	.main-banner__content > .slick-prev{
+		top: 60%;
+	}
+	.main-banner{
+		height: 50vh;
+	}
+	.main-banner .main-banner__item {
+    background-position: bottom;
+    background-size: contain;
+		height: 51vh;
+}
 	.typewriter h1{
     width: 100%;
 
@@ -812,7 +936,7 @@
 		width:100%;
 	}
 	.how{
-height: 600px !important;
+height: 700px !important;
 	}
 	section#section1{
     padding-left: 30px;
@@ -841,13 +965,141 @@ height: 600px !important;
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1199px){
-	.text-banner__content {
-       display: flex;
-    justify-content: center;
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	  
+	  .text-banner__content {
+    display: flex;
+    justify-content: flex-start;
     width: 100%;
     align-items: center;
+}
+	.typewriter h1 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+	.main-banner .mask .main-banner__text .main-banner__description p{
+		    width: 35%;
 	}
+	.text-banner__content p{
+		font-size: 20px;
+    line-height: 30px;
+	}
+	.main-banner__content > .slick-next{
+		top: 80%;
+	}
+	.main-banner__content .slick-dots{
+		top: 69% !important;
+		right: 6%;
+	}
+	.work-text h2, .how h2, .title-flex h2 {
+    font-size: 30px !important;
+}
+	.main-banner__content > .slick-prev{
+		top: 60%;
+	}
+	.main-banner .main-banner__item {
+    background-position: bottom;
+    background-size: contain;
+		height: 51vh;
+}
+	  .how {
+    height: 650px !important;
+}
+	  .card-pricing:nth-child(3){
+		  grid-column:1/3;
+	  }
+	  .card-pricing:nth-child(3) h5 {
+   
+    margin-bottom: 6%;
+    margin-top: 4%;
+}
+	  .card-pricing:nth-child(3) .price-items{
+		      margin-bottom: 0;
+	  }
+	  #solutions .p-text p{
+		  width:80%;
+	  }
+	  .flex-solutions{
+		  margin-top:0;
+	  }
+	  .solutions-item {
+    width: 48% !important;
+    margin-bottom: 2%;
+}
+	  .clients h2{
+		  font-size:30px;
+	  }
+	  .social {
+    width: 100%;
+}
+	  .ftco-footer-social.list-unstyled {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+	  .ftco-footer .ftco-footer-widget div li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+	  .item-img {
+    width: 280px;
+    height: 280px;
+}
+	  .item-card{
+		  display: flex;
+    flex-direction: column;
+    align-items: center;
+	  }
+	 
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.text-banner__content {
+          display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    align-items: center;
+	}
+	.main-banner__content .slick-dots li button:before {
+
+    border: 1px solid #ebebeb;
+
+}
+	.numbers h6 {
+    font-size: 25px;
+    color: #ebebeb;
+    margin-top: 15%;
+}
+	.design-process-content h3 {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 20% !important;
+    font-size: 20px;
+}
+	.design-process-section {
+    margin-top: 118px;
+}
+	.how h2, .title-flex h2{
+		font-size: 35px;
+	}
+	.pricing{
+		padding-bottom: 90px;
+	}
+	
+section.faqs {
+    
+    padding-bottom: 80px;
+    
+}
+	.border-line, .border-line2, .border-line3, .border-line4 {
+    width: 90px;
+    height: 90px;
+}
 	.content-semana p{
     margin-left: 40px;
 	}
@@ -872,9 +1124,7 @@ height: 600px !important;
 	.mancha3{
 		   right: 0% !important;
 	}
-	.how-items{
-		    height: 485px !important;
-	}
+
 	
 	.item-img img{
 		    width: 220px;
@@ -899,23 +1149,44 @@ height: 600px !important;
 		height: 100%;
     margin-left: 0;
 	}
+	.elipse img{
+			    transform: translate(0%);
+		}
+	.main-banner .mask .main-banner__text .main-banner__description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 }
     @media (min-width: 768px) and (max-width: 1024px) {
+		.main-banner .main-banner__item {
+  background-position: bottom;
+			height: 51vh;
+  }
+		
+		.process-model{
+			margin:2rem 0;
+		}
+		.flex-solutions{
+			padding-left: 50px;
+    padding-right: 50px;
+		}
+		.elipse img{
+			    transform: translate(0%);
+		}
 		.box-img {
     width: auto;
     display: none;
 }
-        .logo-main img {
-            margin-top: 1%;
-            width: 50%;
-        }
+        
         .price-items {
             display: flex;
             align-items: center;
             margin-bottom: 5%;
         }
 
-        .multiple-card > .slick-prev {
+        .multiple-card > .slick-prev, .multiple-items > .slick-prev {
 
             left: -1%;
            
@@ -964,17 +1235,18 @@ height: 600px !important;
             width: 47%;
         }
         .btn_custom{
-            height: auto;
+            
             width: auto;
         }
-    
+    .down {
+    display: flex;
+    margin-top: 1rem;
+}
         .mancha8{
             display: none;
         }
     
-        .header2 a.logo-main {
-            width: 55%;
-        }
+       
     
         #search.active {
             width: 350px;
@@ -997,7 +1269,7 @@ height: 600px !important;
             display: none;
         }
         .flex-blog2 .blog-item {
-            width: 48%;
+            width: 45%;
         }
     
         .flex-blog2 .blog-item .img-card img {
@@ -1020,18 +1292,18 @@ height: 600px !important;
         }
     
         .main-banner .mask .main-banner__text .main-banner__description {
-            font-size: 18px;
-            padding: 0;
-            width: 100%!important;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            left: 0%;
-            background: rgb(255 244 244 / 63%);
-            top: 0;
-            bottom: 0;
+              font-size: 18px;
+    padding: 0;
+    width: 100%!important;
+    text-align: -webkit-left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    left: 0;
+    top: 0;
+    margin-left: 1rem;
+    bottom: 0;
+			margin-top: -5rem;
           }
     
           .main-banner .mask .main-banner__text {
@@ -1074,7 +1346,7 @@ height: 600px !important;
     
         width: 4%;
 
-        top: 70%;
+        top: 60%;
      
     }
     .btn_custom{
@@ -1214,7 +1486,7 @@ height: 600px !important;
             height: auto;
         }
 
-        .multiple-card > .slick-prev {
+        .multiple-card > .slick-prev, .multiple-items > .slick-prev {
      
             transform: rotate(
         180deg
@@ -1224,9 +1496,29 @@ height: 600px !important;
     
   .how-items {
     width: 45%;
-    height: auto;
+    min-height:420px !important;
     margin-bottom: 5%;
 }
+		.card-pricing:nth-child(3) {
+    width: 100%;
+    grid-column: 1/3;
+}
+		.solutions-item h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+		.clients h2{
+			font-size: 30px;
+		}
+		.card-pricing:nth-child(3) h5 {
+ 
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+		.card-pricing:nth-child(3) .price-items{
+			
+    margin-bottom: 0%;
+		}
 		.video-text h2 {
     font-size: 30px;
 		} .video-text{
@@ -1288,8 +1580,33 @@ height: 600px !important;
 
 
     @media (min-width: 1024px) and (max-height: 1366px) {
-    
-    
+		section.clients{
+			padding-bottom: 60px;
+		}
+		.how-items p {
+    font-size: 14px;
+}
+
+		.how-items{
+			margin: 15px;
+			    
+    	min-height: 450px;
+
+		}
+		.how {
+    background-color: #ff9100;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    height: 52vh;
+    margin-bottom: 20%;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+		.how-items {
+
+			min-height: 365px !important;
+		}
     
     .flex-there {
     
@@ -1337,25 +1654,36 @@ height: 600px !important;
     
     
     }
+@media (min-height: 500px) and (max-height: 768px) {
+	.how {
+
+    height: 70vh;
+    
+}
+		.how-items {
+
+			min-height: 365px !important;
+		}
+	
+	
+}
 @media (min-width: 900px) and (max-width: 1440px){
-	.how-items{
-		    height: 450px;
-		    margin: 0 17px;
+	.elipse img{
+		transform: translate(-0%);
 	}
+	
 	.nav-link{
-		    font-size: 15px;
+		    font-size: 14px;
 	}
 	.how-tittle h5{
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.how-center{
     margin-top: 20px;
 	}
-	.how-tittle {
-    height: 9vh;
-}
+	
 	.how-items p{
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.text-scroll{
 		       top: 700px;
@@ -1368,11 +1696,22 @@ height: 600px !important;
 	.typewriter h1{
 		    width: 77%;
 	}
-}
-@media (min-width: 1200px) and (max-width: 1439px){
-	.logo-main{
-		width: 50%;
+	.card-pricing {
+		width: 42.5%;}
+	.process-model li.active a .border-line2::after,.process-model li.active a .border-line3::after,.process-model li.active a .border-line4::after{
+		width: 21%;
 	}
+}
+@media (min-width: 1200px) and (max-width: 1440px){
+	.process-model li.active a .border-line2::after,.process-model li.active a .border-line3::after,.process-model li.active a .border-line4::after{
+		width: 21%;
+	}
+	.process-model li.active a .border-line2::after{
+		width: 21%;
+	}
+	.card-pricing {
+		width: 32.5%;}
+	
 	.nav-link{
 font-size: 13px;
 	}
@@ -1380,24 +1719,774 @@ font-size: 13px;
 		font-size:40px;
 }
 	.main-banner__content > .slick-next{
-    top: 78%;
+    top: 75%;
 	}
-	
+	.main-banner__content .slick-dots{
+		top: 66%;
+	}
 	.text-banner__content p{
     font-family: 'Varela Round';
     font-weight: 500;
     font-style: normal;
     width: 100%;
-	font-size:40px;
+	font-size:35px;
+		line-height: 45px;
 }
-	.logo-main img{
-      width: 60%;
+	.main-banner__content > .slick-prev{
+		top:60%;
 	}
-	.how-items{
-    height: 410px;
-
-	}
+	
+	
 	#lang_choice_polylang-2{
 		font-size: 13px;
 	}
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) and (min-height: 900px) and (max-height:900px){
+	.elipse img{
+		    transform: translate(-0%);
+	}
+	.header__main {
+    display: flex;
+    padding: 3rem 1.8rem !important;
+	}
+	 .main-banner .main-banner__item {
+  position: relative;
+  height: 100vh;
+  
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+	.elipse img{
+		    transform: translate(-0%);
+	}
+	.header__main {
+    display: flex;
+    padding:3rem 1.8rem !important;
+	}
+	 .main-banner .main-banner__item {
+  position: relative;
+  height: 100vh;
+  
+  }
+}
+
+@media (min-width:0px) and (max-width: 767px){
+	.text-scroll {
+		width: 100%;
+	}
+	.down {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	.main-banner__content > .slick-prev, .main-banner__content > .slick-next,.main-banner__content .slick-dots{
+		display: none !important;
+	}
+	.main-banner-img img {
+		width: 70%;
+	}
+	.main-banner .mask .main-banner__text .main-banner__description p{
+		line-height: 35px;
+	}
+	.how-items{
+		height: 425px;
+	}
+	.how-tittle h5{
+		font-size: 18px;
+	}
+	
+	.how-items p{
+		font-size: 15px;
+	}
+	.how{
+		margin-bottom: 10%;
+	}
+	.design-process-section {
+    margin-top: 100px;
+}
+}
+
+@media (min-width: 0) and (max-width: 575px){
+	.header2 a.logo-main {
+    margin-right: 3rem;
+    width: 200px;
+}
+	.main-banner {
+    margin-top: 1rem;
+}
+	.main-img__addti {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+	.main-banner__description{
+		padding: 1rem;
+	}
+	.typewriter h1{
+		margin-bottom: 1rem;
+	}
+	.down {
+		align-items: center;
+	}
+	
+	.responsive-menu-btn{
+		width: 80px;
+	}
+	.how {
+    height: 670px;
+	}
+	.btn-open-modal{
+		display: flex;
+	}
+	.responsive-menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+	.nav-item a{
+		margin-bottom: 0%;
+	}
+	.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+	.close span {
+    font-size: 40px;
+}
+	#frm_field_19_container #field_mmsou_label, #frm_field_20_container #field_t2uqr_label {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+	.design-process-content p {
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+	.image-check__semana {
+    margin-left: 5px;
+}
+	p, span, a{
+		font-size:15px;
+	}
+	
+	section.solutions {
+		padding-bottom: 80px;
+	}
+	.video-here img {
+    width: 100%;
+    height: 100%;
+}
+	.text-video .counting, .text-video span{
+		font-size: 3rem;
+	}
+	.main-video__icon {
+    width: 80px;
+		height: 80px;}
+	.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+	section.faqs {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.logo-footer{
+		justify-content: center!important;
+	}
+	.ftco-footer-widget p, .block-237, .ftco-footer-widget,.ftco-heading-2,.logo-footer {
+		text-align: center !important;
+	}
+	#accordion .panel-title a::after, #accordion .panel-title a.collapsed::after{
+		width: 20px;
+		height:20px;
+    line-height: 18px;
+
+	}
+	.video-text {
+    text-align: center;
+    width: 100%;
+}
+	.video-text div{
+		display:flex; 
+		justify-content: center !important;
+	}
+	.design-process-section {
+    margin-top: 120px;
+}
+	.card-pricing h5{
+		margin-bottom: 10%;
+	}
+	.solutions-item h5 {
+		  font-size: 18px;}
+	.ftco-footer-social.list-unstyled{
+		justify-content: center;
+	}
+	section.video{
+		padding-bottom: 70px;
+	}
+	.text-down{
+		line-height: 20px !important;
+	}
+	.down{
+		width: 40%;
+	}
+	.education p{
+		padding: 25px;
+	}
+	.text-blog {
+    
+    margin-top: 0%;
+}
+	.main-banner .main-banner__item {
+    height: 90vh;
+    background-position: 66%;
+		background-size: cover;
+}
+	.text-scroll p{
+		    color: #5e5c5d;
+	}
+	.img-card, .img-card-principal{
+		width: 100%;
+		height: 300px;
+	}
+	.img-card a img, .img-card-principal a img{
+		width: 100%;
+		height: 100%;
+	}
+	.flex-blog2 .blog-item .img-card img {
+    height: 100%;
+}
+	.education p {
+    padding: 0;
+}
+	section.free {
+  
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+		padding-left: 20px
+}
+	.content-education{
+		margin-top: 3rem !important;
+	}
+	.flex-blog2 .blog-item {
+    width: auto;
+    margin: 0 0 2rem 0;
+}
+	.education p {
+    padding: 0 20px;
+}
+	.articles__category{
+    background: #ebebeb;
+    padding-left: 20px;
+    padding-right: 20px;
+		padding-top: 30px;
+}
+.header-two a {
+    font-size: 26px !important;
+    width: 100%;
+}
+	.interna-blog h2 {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+	.interna-flex {
+    display: flex;
+    flex-direction: column;
+}
+	.text-interna {
+    width: auto;
+    order: -1;
+}
+	.text-interna p{
+		font-size: 16px;
+	}
+	.box-aviso{
+		padding: 35px;
+	}
+	.solutions-item p{
+		font-size: 15px;
+	}
+	.how-tittle {
+    min-height: fit-content;
+		height: fit-content;
+}
+	.logo-footer:last-child{
+		margin-bottom: 0%;
+	}
+	.nav-item a{
+		margin-bottom: unset;
+	}
+	.nav-item{
+		padding: 0 0px 20px 0;
+	}
+	.nav-item .btn_custom.btn-open-modal{
+		margin-bottom: 6px;
+	}
+	.multiple-card > .slick-next{
+		top: 42.5%;
+	}
+	.responsive-menu-btn.--is-open {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+}
+	.text-blog h3 {
+    font-size: 20px;
+}
+	.text-card_blog p, .text-blog a p, .free p{
+		font-size: 15px;
+	}
+	 .mancha6{
+		  width: 90px;
+		  height: 90px;
+		  bottom:0;
+		     top: unset;
+		 
+    right: -1rem;
+	  }
+	.mancha11{
+		  display:none;
+	  }
+	.mancha12{
+		width: 100px;
+    height: 100px;
+	}
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  
+	  
+	  
+	  .main-banner .main-banner__item{
+		  height: 90vh;
+		  background-size: cover;
+	  }
+	  .text-banner__content p {
+		  font-size: 20px;}
+	  .work-text h2{
+		  font-size:22px;
+	  }
+	  .ftco-footer-social.list-unstyled{
+		  margin-bottom: -2rem;
+	  }
+	.how-items {
+    height: fit-content;
+}
+	  
+	  .design-process-section {
+    margin-top: 100px;
+}
+	  .solutions-item h5 {
+		  font-size: 18px;}
+	  
+	  .mancha6{
+		  width: 90px;
+		  height: 90px;
+		  bottom:0;
+		      top: unset;
+		  
+    right: -1rem;
+	  }
+	  .mancha11{
+		  display:none;
+	  }
+	  .mancha12{
+		width: 100px;
+    height: 100px;
+	}
+
+}
+
+@media (min-width:576px) and (max-width: 767px){
+		.header2 a.logo-main {
+    margin-right: 3rem;
+    width: 200px;
+}
+	.main-banner {
+    margin-top: 1rem;
+}
+	.typewriter h1{
+		font-size: 17px;
+	}
+	.text-down{
+		    margin-bottom: 45px;
+    line-height: 20px;
+	}
+	.main-banner .main-banner__item{
+		    background-size: cover;
+  background-repeat: no-repeat;
+	}
+	.nav-item a{
+		margin-bottom: 25%;
+	}
+	.nav-item:nth-child(1) a{
+		margin-bottom: 15%;
+	}
+	.main-banner .main-banner__item{
+		height: 100vh;
+	}
+	.responsive-menu-btn.--is-open {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+}
+	.nav-item a.btn-open-modal{
+		display: flex;
+		justify-content:  center;
+	}
+	.image-check__semana img {
+    width: 30px;
+}
+	.image-check__semana {
+    margin-left: 10px;
+}
+	.design-process-content p{
+		font-size: 17px;
+	}
+	
+	.p-text p{
+		font-size: 18px;
+	}
+	.video-here img {
+    width: 100%;
+    height: 100%;
+}
+	.text-video span{
+		font-size: 6rem;
+	}
+	
+	.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+	section.faqs {
+		padding-top: 100px;}
+	section.faqs_acc {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+	.btn-open-modal {
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+	#accordion .panel-title a{
+		font-size: 17px;
+	}
+	.how-flex > .slick-prev,.how-flex > .slick-next{
+		display: none !important;
+	}
+	.how h2, .how h2{
+		font-size: 30px;
+	}
+	.process-model li::after{
+		top: 25px;
+	}
+	.design-process-content {
+    display: block;
+    margin-top: 8%;
+}
+	.design-process-content p {
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+	.card-pricing h5 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 4%;
+    margin-top: 10%;
+}
+	.content-plan_general p:before {
+    background-size: 30px;
+}
+	.container {
+    max-width: 650px;
+}
+	.content-semana p {
+    margin-left: 50px;
+}
+	.logo-footer img {
+    width: 40%;
+    margin-bottom: 0;
+}
+	.logo-footer {
+    justify-content: end;
+    margin-bottom: 2%;
+}
+	.logo-footer:last-child{
+		margin-bottom: -2rem;
+	}
+	.main-banner-img img {
+    width: 40%;
+}
+	p, span, a{
+		font-size:17px;
+	}
+	.free p{
+		font-size: 18px;
+	}
+	.header-two a {
+    font-size: 25px !important;
+}
+	.interna-flex {
+    display: flex;
+    flex-direction: column;
+}
+	.text-interna {
+    width: auto;
+    order: -1;
+}
+	.header2 .nav-link{
+		font-size: 17px;
+	}
+	.img-card, .img-card-principal{
+		width: 100%;
+		height: 300px;
+	}
+	.img-card a img, .img-card-principal a img{
+		width: 100%;
+		height: 100%;
+	}
+	.text-blog {
+    text-align: center;
+    margin-top: 0;
+}
+	.text-card_blog{
+		min-height: 350px;
+	}
+	.flex-blog2 .blog-item .img-card img {
+    height: 100%;
+}
+	.flex-blog2 .blog-item {
+    width: auto;
+    margin: 0 0 2rem 0;
+}
+	.text-card_blog h3 {
+    font-size: 24px;
+}
+	section.education {
+    padding-top: 100px;
+}
+	.articles.articles__category{
+		padding: 20px 20px 0 20px;
+	}
+	.box-info h6 {
+    margin-bottom: 4%;
+    font-weight: 600;
+}
+	.box-info{
+		margin-bottom: 0;
+	}
+	section.free {
+    padding: 40px 30px;
+}
+	.card-pricing {
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 8%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.card-pricing {
+    width: 100%;
+}
+	.header2 a.logo-main {
+    margin-right: 3rem;
+    width: 250px;
+}
+	#slick-slide23 > div.how-center > div > div {
+    padding: 0px;
+    background: transparent;
+    width: 100%;
+}
+	#slick-slide23 > div.how-center > div {
+    border: 1px solid #fff;
+    padding: 0px;
+}
+	.border-line ,.border-line2, .border-line3, .border-line4{
+    width: 85px;
+    height: 85px;
+}
+	.solutions-item h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+	.solutions-item {
+    width: 30%;
+    margin-bottom: 2%;
+}
+	section.solutions {
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+	.pricing {
+ 
+    padding-bottom: 60px;
+}
+	.btn-open-modal{
+		display: flex;
+		justify-content: center;
+	}
+	.how h2, .title-flex h2 {
+ 
+    font-size: 35px;
+}
+	.design-process-content h3 {
+    margin-bottom: 170px !important;
+    left: 50px;
+    font-size: 25px;
+}
+	section.faqs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+	#accordion .panel-title a {
+    padding: 30px 30px 20px 15px;
+    font-size: 18px;
+}
+	#accordion .panel-title a {
+    padding: 30px 30px 20px 15px;
+    font-size: 18px;
+}
+	.how-items:nth-child(4) .border-icon .how-icon{
+		background: #ff9100;
+    border-radius: 50%;
+    width: 96%;
+    padding: 15px;
+	}
+	.how-items:nth-child(4) .border-icon{
+		border: 1px solid #ff9100;
+		padding: 7px;
+	}
+
+	
+	.item-img{
+		width:300px;
+		height:300px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.header2 a.logo-main {
+    margin-right: 3rem;
+    width: 250px;
+}
+	#slick-slide23 > div.how-center > div > div {
+    padding: 0px;
+    background: transparent;
+    width: 100%;
+}
+	#slick-slide23 > div.how-center > div {
+    border: 1px solid #fff;
+    padding: 0px;
+}
+	.how-items:nth-child(4) .border-icon .how-icon{
+		background: #ff9100;
+    border-radius: 50%;
+    width: 96%;
+    padding: 15px;
+	}
+	.how-items:nth-child(4) .border-icon{
+		border: 1px solid #ff9100;
+		padding: 7px;
+	}
+	.design-process-content {
+  
+    flex-wrap: wrap;
+}
+	.card-pricing {
+    width: 45.5%;
+  
+}
+	.solutions-item {
+    width: 30%;
+    margin-bottom: 5%;
+}
+	.p-text p{
+		font-size:18px;
+	}
+	.btn-open-modal {
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+	.header2 {
+    display: flex;
+    padding: 2.5rem 2.8rem!important;
+}
+	.solutions-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+	
+}
+
+
+.content-education{
+	display:none;
+}
+
+
+@media (max-width: 1367px) and (min-width: 1025px){
+
+	.typewriter h1{
+		margin-bottom: 1%;
+	}
+	.header2 {
+    display: flex;
+    padding: 2.5rem 1.8rem!important;
+}
+}
+
+
+.addons li input{
+	outline: none;
+}
+@media (min-width: 768px) and (max-width: 1024px){
+	.main-banner {
+		height: 50vh;
+	}
+	.main-banner .main-banner__item {
+    background-position: bottom;
+    height: 51vh;
+}
+	.process-model li.active a .border-line2::after{
+    top: 48px;
+    width: 18%;
+    right: 70%;
+}
+	.process-model li.active a .border-line3::after {
+    top: 48px;
+    width: 17.3%;
+    right: 41%;
+}
+	.process-model li.active a .border-line4::after {
+    top: 48px;
+    width: 17.5%;
+    right: 12%;
+}
+	
 }

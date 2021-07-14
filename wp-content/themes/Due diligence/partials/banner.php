@@ -16,7 +16,7 @@
 		?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();  $counter++; ?> 		
 	
-      <div class="main-banner__item">
+      <div class="main-banner__item" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
         <div class="mask">
           <div class="main-banner__text">
             
@@ -33,11 +33,14 @@
 	               if( $lang == 'es-CO'): ?>
 			       <!-- ESPAÑOL -->
                 <div style="width: fit-content;">
-                  <a class="btn_custom" style=" padding: 0px 15px;" href="#found"> Programa una reunión</a>
+                  <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl" style=" padding: 0px 15px;" href="#"> Obtén un mes gratis</a>
 				</div>
 				<?php else: ?>
 			  <!-- INGLES-->
-				 <a class="btn_custom" style=" padding: 0px 15px;" href="#found"> Schedule a Meeting</a>
+				<div style="width: fit-content;">
+                  <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl" style=" padding: 0px 15px;" href="#"> Get a free month </a>
+				</div>
+				 
 				<?php endif; ?>
                  
                 <a href="#section1">
@@ -50,12 +53,12 @@
 	            	$lang = get_bloginfo('language');
 	               if( $lang == 'es-CO'): ?>
 			       <!-- ESPAÑOL -->
-                  <div class="text-scroll"> <p class="text-down"> <span style="font-weight: bold; color: black;"> Descubre </span> <br> 
+                  <div class="text-scroll"> <p class="text-down"> <span style="font-weight: 500; color: black;"> Descubre </span> <br> 
 Desplazarse hacia abajo</p> 
 				</div>
 					  	<?php else: ?>
 			  <!-- INGLES-->
-					    <div class="text-scroll"> <p class="text-down"> <span style="font-weight: bold; color: black;"> Discover</span> <br> Scroll Down</p> 
+					    <div class="text-scroll"> <p class="text-down"> <span style="font-weight: 500; color: black;"> Discover</span> <br> Scroll Down</p> 
 				</div>
 					  <?php endif; ?>
                 </div>
@@ -63,7 +66,7 @@ Desplazarse hacia abajo</p>
               </div>
             </div>
             <div class="main-banner-img">
-              <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+              <!--<img src="" alt="">-->
             </div>
             <div class="numbers">
               <h5>0<?php echo $a ?></h5>
@@ -77,25 +80,10 @@ Desplazarse hacia abajo</p>
             </div>
         </div>
       </div>
-	<?php $a = $a + 1; endwhile; ?>
+	<?php $a = $a + 1; endwhile;
+				  
+		wp_reset_postdata();
+		?>
 
-      <!-- <div class="main-banner__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.png">
-      </div> -->
-     
-      <!-- <div class="main-banner__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.png">
-      </div> -->
-        
-    
-
-      <!-- <div class="main-banner__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.png">
-      </div> -->
-        
-      
-
-      <!-- <div class="main-banner__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.png">
-      </div> -->
+          </div>
     </div>

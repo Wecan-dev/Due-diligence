@@ -10,15 +10,7 @@
 <div class="icon-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="">
 </div>
-	 <?php 
-		$lang = get_bloginfo('language');
-	    if( $lang == 'es-CO'): ?>
-			  <!-- ESPAÑOL -->
-<h2>Preguntas frecuentes</h2>
-	 <?php else: ?>
-			  <!-- INGLES-->
-	<h2> Frequently asked questions</h2>
-	 <?php endif; ?>
+	<h2> <?php the_field( 'title_faq' ); ?></h2>
 </div>
 <div class="line-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line26.png" alt="">
@@ -45,7 +37,7 @@
           </div>
         </div>
       </div>
-		<?php endwhile; ?>
+		<?php endwhile; wp_reset_postdata(); ?>
 
     </div>
   </div><!--- END COL -->		
@@ -53,13 +45,46 @@
 </div>
 </section>
 <div style=" display: flex; justify-content: center;">
-	 <?php 
+		<?php 
 		$lang = get_bloginfo('language');
 	    if( $lang == 'es-CO'): ?>
-<a class="btn_custom" href="">EMPEZAR AHORA</a></div>
-	<?php else: ?>
-			  <!-- INGLES-->
-	<a class="btn_custom" href="">LET'S START NOW</a>
+		<!-- ESPAÑOL -->
+			<?php if ( get_field( 'seleccione_tipo_de_boton_preguntas' ) == 1 ) : ?>
+			<?php $popup_de_preguntas_frecuencias = get_field( 'popup_de_preguntas_frecuencias' ); ?>
+			<?php if ( $popup_de_preguntas_frecuencias ) : ?>
+				<a class="btn_custom btn-open-modal text-uppe" data-toggle="modal" href="<?php echo esc_url( $popup_de_preguntas_frecuencias['url'] ); ?>" target="<?php echo esc_attr( $popup_de_preguntas_frecuencias['target'] ); ?>"><?php echo esc_html( $popup_de_preguntas_frecuencias['title'] ); ?></a>
+			<?php endif; ?>
+		<?php else : ?>
+			<?php $enlace_faq = get_field( 'enlace_faq' ); ?>
+			<?php if ( $enlace_faq ) : ?>
+				<a class="btn_custom btn-open-modal text-uppe "  href="<?php echo esc_url( $enlace_faq['url'] ); ?>" target="<?php echo esc_attr( $enlace_faq['target'] ); ?>"><?php echo esc_html( $enlace_faq['title'] ); ?></a>
+			<?php endif; ?>
+		<?php endif; ?>
+		
+		<?php else: ?>
+	
+	
+	<?php if ( get_field( 'select_faq_type' ) == 1 ) : ?>
+		<?php $buttom_faq = get_field( 'buttom_faq' ); ?>
+		<?php if ( $buttom_faq ) : ?>
+			<a  class="btn_custom btn-open-modal text-uppe" data-toggle="modal" data-target="<?php echo esc_url( $buttom_faq['url'] ); ?>" href="<?php echo esc_url( $buttom_faq['url'] ); ?>" target="<?php echo esc_attr( $buttom_faq['target'] ); ?>"><?php echo esc_html( $buttom_faq['title'] ); ?></a>
+		<?php endif; ?>
+	
+	<?php else : ?>
+		<?php $link_faq = get_field( 'link_faq' ); ?>
+<?php if ( $link_faq ) : ?>
+	<a class="btn_custom btn-open-modal text-uppe" href="<?php echo esc_url( $link_faq['url'] ); ?>" target="<?php echo esc_attr( $link_faq['target'] ); ?>"><?php echo esc_html( $link_faq['title'] ); ?></a>
+<?php endif; ?>
 	<?php endif; ?>
+		
+ 		<?php endif; ?>
+	
+	
+
 </div>
 </section>
+<style>
+	.text-uppe{
+		text-transform: uppercase;
+	}
+</style>

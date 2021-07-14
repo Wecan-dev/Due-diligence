@@ -1,12 +1,5 @@
 <section id="works" class="how">
-	<?php 
-		$lang = get_bloginfo('language');
-	    if( $lang == 'es-CO'): ?>
-			  <!-- ESPAÑOL -->
-<h2>¿Cómo Funcionamos?</h2>
-	<?php else: ?>
-	<h2>How it works</h2>
-	 <?php endif; ?>
+	<h2><?php the_field( 'title_function' ); ?></h2>
 <div class="linea2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/linea22.png" alt=""></div>
 <div class="main-works__flex">
 	<div class="how-flex">
@@ -25,7 +18,9 @@
 <div>  <?php the_excerpt(); ?></div>
 
 </div>
-<?php endwhile; ?>
+<?php endwhile;
+		wp_reset_postdata();
+		?>
 
 
 

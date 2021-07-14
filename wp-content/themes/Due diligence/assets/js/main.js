@@ -75,11 +75,11 @@ $(function () {
     }
   });
 });
+   $('.nav-item').click(function () {
+	  responsiveBtnIcon.classList.toggle("--is-open");
+	  navMenu.classList.toggle("--is-open");
+	});
 
-$('.nav-item').click(function () {
-  responsiveBtnIcon.classList.toggle("--is-open");
-  navMenu.classList.toggle("--is-open");
-});
 
 
 $(function () {
@@ -108,14 +108,15 @@ $('.multiple-items').slick({
     speed: 500,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
+    slidesToScroll: 1,
+     arrows: true,
     dots:true,
+	adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 700,
             settings: {
-                arrows: false,
+                arrows: true,
                 slidesToShow: 1,
                 verticalSwiping: false,
                 vertical: false,
@@ -128,6 +129,15 @@ $('.multiple-items').slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,
             }
+			
+        },
+		{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+			
         }
     ]
 });
@@ -137,9 +147,10 @@ $('.how-flex').slick({
     speed: 500,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     arrows: true,
     dots:false,
+	 adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 700,
@@ -156,7 +167,15 @@ $('.how-flex').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
+				 dots:true,
+            }
+        },
+		  {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
 				 dots:true,
             }
         }
@@ -169,7 +188,7 @@ $('.multiple-card').slick({
   speed: 500,
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   arrows: true,
   dots:false,
   responsive: [
@@ -188,6 +207,15 @@ $('.multiple-card').slick({
               slidesToShow: 2,
               slidesToScroll: 2,
           }
+		  
+      },
+	   {
+          breakpoint: 1200,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+          }
+		  
       }
   ]
 });
@@ -234,3 +262,101 @@ body.addEventListener('click', (e) => {
   }
 });
 
+jQuery(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+console.log("document is ready");
+  
+  
+  $('.btn-open-modal[href^=]').click(function(e){
+	  alert('hola')
+    e.preventDefault();
+    var href = $(this).attr('href');
+    $(href).modal('toggle');
+
+	  $(this).attr("data-toggle","modal");
+	  
+  });
+});  
+
+
+jQuery(document).ready(function($){
+
+	
+$('.more-icon-preocess li:nth-child(1)').on({
+     'click': function(){
+         
+		  $('#img-one').attr('src','http://159.89.229.55/Due-diligence/wp-content/uploads/2021/05/paper-orange.png');
+		 $('#img-two').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avion.png');
+		 $('#img-three').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avioneta.png');
+		 $('#img-four').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/cohete.png');
+     }
+ });
+	
+$('.more-icon-preocess li:nth-child(2)').on({
+     'click': function(){
+         $('#img-two').attr('src','http://159.89.229.55/Due-diligence/wp-content/uploads/2021/05/avion-orange.png');
+		  $('#img-one').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/paper.png');
+		 $('#img-three').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avioneta.png');
+		 $('#img-four').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/cohete.png');
+     }
+ });
+	
+	$('.more-icon-preocess li:nth-child(3)').on({
+		'click': function(){
+			$('#img-three').attr('src','http://159.89.229.55/Due-diligence/wp-content/uploads/2021/05/avioneta-orange.png');
+			$('#img-two').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avion.png');
+			$('#img-one').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/paper.png');
+			
+			$('#img-four').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/cohete.png');
+		}
+	});
+	
+	$('.more-icon-preocess li:nth-child(4)').on({
+		'click': function(){
+			$('#img-four').attr('src','http://159.89.229.55/Due-diligence/wp-content/uploads/2021/05/cohete-orange.png');
+			 $('#img-three').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avioneta.png');
+			$('#img-two').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/avion.png');
+			$('#img-one').attr('src','http://159.89.229.55/Due-diligence/wp-content/themes/Due%20diligence/assets/img/paper.png');
+			
+			
+		}
+	});
+
+});
+
+
+/* -------------------------
+   -----  Counters -----
+   ------------------------- */
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    var position = $('#counter-stats').scrollTop()
+
+    if (scroll >= position) {
+        $('.counting').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+
+                    duration: 3000,
+                    easing: 'linear',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+
+                });
+        });
+    }
+});

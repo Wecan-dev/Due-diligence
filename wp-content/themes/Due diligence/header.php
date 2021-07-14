@@ -2,9 +2,10 @@
 
 <html <?php bloginfo('language'); ?>>
 <head>
-<?php wp_head(); ?>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <meta content='ie=edge' http-equiv='X-UA-Compatible'>
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -15,33 +16,44 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/slick.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/media.css">
-  <title>Due Diligence</title>
-
+ 
+	<title><?php wp_title('|', true, 'right'); ?></title>
+  <meta content='#fff' name=' theme-color'>
+  <meta content='<?php bloginfo('description'); ?>' name='description'>
+  <meta content='Accounting florida, Accountant Florida, Business accounting, Bookkeeping Florida, CFO Florida, Accounting Services Florida, Online accounting, Accounts Receivable, Accounting software, Finance Services' name='keywords'>
+  <meta content='website' property='og:type'>
+  <meta content='<?php wp_title('|', true, 'right'); ?>' property='og:title'>
+  <meta content='<?php bloginfo('description'); ?>' property='og:description'>
+<?php wp_head(); ?>
 </head>
-<div class="elipse">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
-  </div>
 
-
-      <style>
-        .elipse{
-        background: #fff;
-        position: fixed;
-        z-index: 9999999;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-
-        </style> 
 <body>
-<?php if(is_home()): ?>
-	  <header class="header__main navbar-me back container-fluid">
+	
+	<div class="main-content__global">
+		
+		<?php if ( wp_is_mobile() ) : ?>
+		<div class="btn-float__whats">
+			<a href="https://api.whatsapp.com/send?phone=+13057124957">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp (1).png">
+			</a>
+		</div>
+		<?php else : ?>
+			<div class="btn-float__whats">
+			<a  href="https://web.whatsapp.com/send?phone=+13057124957">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp (1).png">
+			</a>
+		</div>
+		<?php endif; ?>
+		
+
+	
+
+
+     
+<?php if(is_front_page()): ?>
+	  <header class="header__main navbar-me back container-fluid header2">
   
-    <a  class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"> </a>
+    <a href="<?php echo bloginfo('url');?>"   class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-color.svg" alt="logo"> </a>
 
 
 <button class="responsive-menu-btn">
@@ -61,25 +73,26 @@
 			  <!-- ESPAÑOL -->	  
 <nav class="nav__menu">
    <div class="nav-item">
+ 
+   <a class="nav-link nav-scrolling" href="#works">¿Cómo funcionamos?</a>
 
-   <a class="nav-link" href="#works">¿Cómo funcionamos?</a>
-
    </div>
    <div class="nav-item">
-    <a class="nav-link" href="#pricing">Precios</a>
+    <a class="nav-link nav-scrolling" href="#pricing">Precios</a>
    </div>
    <div class="nav-item">
-     <a class="nav-link" href="#solutions">Soluciones</a>
+     <a class="nav-link nav-scrolling" href="#solutions">Soluciones</a>
    </div>
    <div class="nav-item">
-    <a class="nav-link" href="#team">Nuestro Equipo</a>
+    <a class="nav-link nav-scrolling" href="#team">Nuestro Equipo</a>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="<?php echo bloginfo('url');?>/index.php/education">Educación</a>
+    <a class="nav-link " href="<?php echo bloginfo('url');?>/educacion">Educación</a>
   </div>
+	
 
   <div class="nav-item">
-    <a class="btn_custom" href="#contact">Contáctanos </a>
+    <a  class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl" href="#">Contáctanos </a>
   </div>
   <div class="nav-item">
     
@@ -94,24 +107,24 @@
 		  <nav class="nav__menu">
    <div class="nav-item">
 
-   <a class="nav-link" href="#works">How it Works</a>
+   <a class="nav-link nav-scrolling" href="#works">How it Works</a>
 
    </div>
    <div class="nav-item">
-    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-link nav-scrolling" href="#pricing">Pricing</a>
    </div>
    <div class="nav-item">
-     <a class="nav-link" href="#solutions">Solutions</a>
+     <a class="nav-link nav-scrolling" href="#solutions">Solutions</a>
    </div>
    <div class="nav-item">
-    <a class="nav-link" href="#team">Our Team</a>
+    <a class="nav-link nav-scrolling" href="#team">Our Team</a>
+  </div>
+ 
+<div class="nav-item">
+    <a class="nav-link " href="<?php echo bloginfo('url');?>/education">Education</a>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="<?php echo bloginfo('url');?>/index.php/education">Education</a>
-  </div>
-
-  <div class="nav-item">
-    <a class="btn_custom" href="#contact">Contact Us</a>
+    <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl">Contact Us</a>
   </div>
   <div class="nav-item">
     
@@ -165,9 +178,9 @@
       </style> 
 <body>
 
-<header style="background-color: rgb(255 255 255 / 83%)" class="header__main navbar-me back container-fluid header2">
+<header style="background-color: rgb(255 255 255 / 100%)" class="header__main navbar-me back container-fluid header2">
 
-  <a href="<?php echo bloginfo('url');?>"  class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"> </a>
+  <a href="<?php echo bloginfo('url');?>"   class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-color.svg" alt="logo"> </a>
 
 
 <button class="responsive-menu-btn">
@@ -184,26 +197,26 @@
 <nav class="nav__menu">
   <div class="nav-item">
 
-  <a class="nav-link" href="#works">How it Works</a>
+  <a class="nav-link" href="http://159.89.229.55/Due-diligence/#works">How it Works</a>
 
   </div>
   <div class="nav-item">
-  <a class="nav-link" href="#pricing">Pricing</a>
+  <a class="nav-link" href="http://159.89.229.55/Due-diligence/#pricing">Pricing</a>
   </div>
   <div class="nav-item">
-  <a class="nav-link active" href="<?php echo bloginfo('url');?>/index.php/education">Education</a>
+  <a class="nav-link active" href="<?php echo bloginfo('url');?>/education">Education</a>
   </div>
   <div class="nav-item">
-  <a class="nav-link" href="#team">Resources</a>
+  <a class="nav-link" href="http://159.89.229.55/Due-diligence/#team">Resources</a>
 </div>
 <div class="nav-item">
-<a class="nav-link" href="#team">For Accountants</a>
+<a class="nav-link" href="http://159.89.229.55/Due-diligence/#team">For Accountants</a>
 </div>
 <div class="nav-item">
-<a class="nav-link" href="#team">1 (888) 760 1940</a>
+<a class="nav-link" href="tel:1887601940">1 (888) 760 1940</a>
 </div>
 <div class="nav-item">
-  <a class="btn_custom" href="#contact">Star a Free Trial</a>
+  <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl">Contact Us</a>
 </div>
 <div class="nav-item">
   <select class="form-control" id="exampleFormControlSelect1">
@@ -259,7 +272,7 @@
 
 <header style="background-color: rgb(255 255 255 / 28%);" class="header__main navbar-me back container-fluid header2">
 
-  <a href="<?php echo bloginfo('url');?>"  class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"> </a>
+  <a href="<?php echo bloginfo('url');?>"   class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-color.svg" alt="logo"> </a>
 
 
 <button class="responsive-menu-btn">
@@ -276,32 +289,35 @@
 <nav class="nav__menu">
   <div class="nav-item">
 
-  <a class="nav-link" href="#works">How it Works</a>
+  <a class="nav-link nav-scrolling" href="http://159.89.229.55/Due-diligence/#works">How it Works</a>
 
   </div>
   <div class="nav-item">
-  <a class="nav-link" href="#pricing">Pricing</a>
+  <a class="nav-link nav-scrolling" href="http://159.89.229.55/Due-diligence/#pricing">Pricing</a>
   </div>
   <div class="nav-item">
-  <a class="nav-link active" href="<?php echo bloginfo('url');?>/index.php/education">Education</a>
+  <a class="nav-link  active" href="<?php echo bloginfo('url');?>/education">Education</a>
   </div>
   <div class="nav-item">
-  <a class="nav-link" href="#team">Resources</a>
+  <a class="nav-link nav-scrolling" href="http://159.89.229.55/Due-diligence/#team">Resources</a>
 </div>
 <div class="nav-item">
-<a class="nav-link" href="#team">For Accountants</a>
+<a class="nav-link nav-scrolling" href="http://159.89.229.55/Due-diligence/#team">For Accountants</a>
 </div>
 <div class="nav-item">
-<a class="nav-link" href="#team">1 (888) 760 1940</a>
+<a class="nav-link nav-scrolling" href="http://159.89.229.55/Due-diligence/#team">1 (888) 760 1940</a>
 </div>
 <div class="nav-item">
-  <a class="btn_custom" href="#contact">Star a Free Trial</a>
+  <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl">Contact Us</a>
 </div>
 <div class="nav-item">
-  <select class="form-control" id="exampleFormControlSelect1">
-    <option>ES</option>
-    <option>ENG</option>        
-  </select>
+  <div class="nav-item">
+    
+       <?php if(is_active_sidebar('main_sidebar')){
+                dynamic_sidebar('main_sidebar');
+               }?>  
+
+  </div>
 </div>
 </nav>
 </header>
@@ -310,8 +326,8 @@
 		
 	<header style="background-color: rgb(255 255 255 / 28%);" class="header__main navbar-me back container-fluid header2">
 
-  <a href="<?php echo bloginfo('url');?>"  class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"> </a>
-
+ 
+<a href="<?php echo bloginfo('url');?>"   class="logo-main"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-color.svg" alt="logo"> </a>
 
 <button class="responsive-menu-btn">
   <svg class="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
@@ -324,37 +340,73 @@
       />
   </svg>
 </button>
+ <?php 
+		$lang = get_bloginfo('language');
+	    if( $lang == 'es-CO'): ?>
+			  <!-- ESPAÑOL -->	  
 <nav class="nav__menu">
-  <div class="nav-item">
+   <div class="nav-item">
 
-  <a class="nav-link" href="http://159.89.229.55/Due-diligence/index.php/es/#works"><?php _e('How it Works','apk') ?></a>
+   <a class="nav-link " href="http://159.89.229.55/Due-diligence/index.php/es/#works">¿Cómo funcionamos?</a>
+
+   </div>
+   <div class="nav-item">
+    <a class="nav-link" href="http://159.89.229.55/Due-diligence/index.php/es/#pricing">Precios</a>
+   </div>
+   <div class="nav-item">
+     <a class="nav-link " href="http://159.89.229.55/Due-diligence/index.php/es/#solutions">Soluciones</a>
+   </div>
+   <div class="nav-item">
+    <a class="nav-link " href="http://159.89.229.55/Due-diligence/index.php/es/#team">Nuestro Equipo</a>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link " href="<?php echo bloginfo('url');?>/educacion">Educación</a>
+  </div>
+
+  <div class="nav-item">
+    <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl">Contáctanos</a>
+  </div>
+  <div class="nav-item">
+    
+       <?php if(is_active_sidebar('main_sidebar')){
+                dynamic_sidebar('main_sidebar');
+               }?>  
 
   </div>
-  <div class="nav-item">
-  <a class="nav-link" href="http://159.89.229.55/Due-diligence/index.php/es/#pricing"><?php _e('Pricing','apk') ?></a>
-  </div>
-  <div class="nav-item">
-  <a class="nav-link active" href="<?php echo bloginfo('url');?>/index.php/education"><?php _e('Education','apk') ?></a>
-  </div>
-  <div class="nav-item">
-  <a class="nav-link" href="#team"><?php _e('Resources','apk') ?></a>
-</div>
-<div class="nav-item">
-<a class="nav-link" href="#team"><?php _e('For Accountants','apk') ?></a>
-</div>
-<div class="nav-item">
-<a class="nav-link" href="#team">1 (888) 760 1940</a>
-</div>
-<div class="nav-item">
-  <a class="btn_custom" href="#contact"><?php _e('Star a Free Trial','apk') ?></a>
-</div>
-<div class="nav-item">
-  <select class="form-control" id="exampleFormControlSelect1">
-	 
-     
-  </select>
-</div>
 </nav>
+  <?php else: ?>
+	 <!-- INGLES-->
+		  <nav class="nav__menu">
+   <div class="nav-item">
+
+   <a class="nav-link" href="http://159.89.229.55/Due-diligence/#works">How it Works</a>
+
+   </div>
+   <div class="nav-item">
+    <a class="nav-link " href="http://159.89.229.55/Due-diligence/#pricing">Pricing</a>
+   </div>
+   <div class="nav-item">
+     <a class="nav-link " href="http://159.89.229.55/Due-diligence/#solutions">Solutions</a>
+   </div>
+   <div class="nav-item">
+    <a class="nav-link " href="http://159.89.229.55/Due-diligence/#team">Our Team</a>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link " href="<?php echo bloginfo('url');?>/education">Education</a>
+  </div>
+
+  <div class="nav-item">
+    <a class="btn_custom btn-open-modal" data-toggle="modal" data-target="#modal-fullscreen-xl">Contact Us</a>
+  </div>
+  <div class="nav-item">
+    
+       <?php if(is_active_sidebar('main_sidebar')){
+                dynamic_sidebar('main_sidebar');
+               }?>  
+
+  </div>
+</nav>
+	<?php endif; ?>
 </header>
 
 
@@ -364,3 +416,18 @@
 
 	
 <div href="#" class="toTop"> ↑ </div>
+	
+	 <style>
+        .elipse{
+        background: #fff;
+        position: fixed;
+        z-index: 9999999;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        </style> 

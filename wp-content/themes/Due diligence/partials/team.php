@@ -3,15 +3,7 @@
 <div class="icon-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="">
 </div>
-	 <?php 
-		$lang = get_bloginfo('language');
-	    if( $lang == 'es-CO'): ?>
-			  <!-- ESPAÑOL -->
-<h2> Nuestro Equipo</h2>
-	<?php else: ?>
-			  <!-- INGLES-->
-	<h2>Our Team</h2>
-	<?php endif; ?>
+	 <h2><?php the_field( 'title_team' ); ?></h2>
 </div>
 <div class="line-pricing">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line26.png" alt="">
@@ -26,7 +18,7 @@
     <div class="item-img"> 
         <div class="red-social">
           <div>
-			  <a href="<?php the_field( 'redes_link' ); ?>">
+			  <a  target="_blank" href="<?php the_field( 'redes_link' ); ?>">
 			    <img src="http://159.89.229.55/Due-diligence/wp-content/uploads/2021/03/linkedin-1.png">
 			  </a>
            
@@ -42,7 +34,7 @@
         <?php the_content(); ?>
     </div>
   </div>
-	<?php endwhile; ?>
+	<?php endwhile; wp_reset_postdata(); ?>
   
    
     

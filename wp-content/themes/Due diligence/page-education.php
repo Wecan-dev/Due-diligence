@@ -1,21 +1,13 @@
 <?php get_header(); ?>
+
 <div href="#" class="toTop"> ↑ </div>
 
 
 <section class="education">
 <h2>Due Diligence<br>
-<span style="font-weight:600;">Blog</span>
 </h2>
-		<?php 
-	$lang = get_bloginfo('language');
-	if( $lang == 'es-CO'): ?>
-	 <!-- ESPAÑOL -->
-<p>Tips contables, tributarios y asesoramiento sobre ganancias que le ayudarán a entender las finanzas de su empresa.</p>
-	<?php else: ?>
-			  <!-- INGLES-->
-	<p>Accounting, profit advisory and tax tips to help you understand your business finances.</p>
-	 <?php endif; ?>
-
+	
+<?php the_content(); ?>
 <div class="tab-education">
 
 
@@ -34,8 +26,8 @@
 <li class="nav-item3">
   <a><div id="search">
 <i class="fa fa-search" id="search-icon"></i>
-<form  action="<?php bloginfo('url'); ?>  method="get" ">
-  <input type="search" id="search-input" name="search" autocomplete="off">
+<form  action="<?php bloginfo('url'); ?>"  method="get">
+  <input type="search" id="search-input" name="s" autocomplete="off">
 </form>
 </div> </a>
 </li>
@@ -45,7 +37,7 @@
       <div class=" card-blog">
 <?php if ( have_posts ) :  ?>
 <?php 
-$args = array('posts_per_page' => 1,);
+$args = array('posts_per_page' => 1, 'offset' => 0);
 $query = new WP_Query( $args );?>
 
 			<?php while( $query->have_posts()) : $query->the_post();?>
@@ -57,14 +49,20 @@ $query = new WP_Query( $args );?>
 					<div class="card-first">
 						<div class="blog-item">
 							<div class="img-card-principal">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-card.png">
+								<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+								</a>
+								
 							</div>
 						</div>
 					</div>
 					<div class="text-blog">
 						<?php the_category()?>
-						<h3><?php the_title() ?> </h3>
-						<?php the_excerpt() ?>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title() ?> </h3></a>
+						<a href="<?php the_permalink(); ?>"><p>
+							<?php the_excerpt() ?>
+							</p>
+						</a>
 					</div>
 			</div>
 			 <?php  endwhile;  ?>
@@ -88,7 +86,7 @@ $query = new WP_Query( $args );?>
 	
 		
 <?php 
-$args = array('posts_per_page' => 2,);
+$args = array('posts_per_page' => 2,'offset' => 1);
 $query = new WP_Query( $args );?>
  <?php if ( have_posts ) : ?>
 			<?php while( $query->have_posts()) : $query->the_post();?>
@@ -97,12 +95,17 @@ $query = new WP_Query( $args );?>
 				<div class="card-first">
 					<div class="blog-item">
 						<div class="img-card">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-card.png">
+							<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+								</a>
 						</div>
 						<div class="text-card_blog">
 							<?php the_category()?>
-							<h3><?php the_title() ?></h3>
+							<a href="<?php the_permalink(); ?>"><h3><?php the_title() ?> </h3></a>
+							<a href="<?php the_permalink(); ?>"><p>
 								<?php the_excerpt() ?>
+								</p>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -120,19 +123,24 @@ $query = new WP_Query( $args );?>
 			</div>
 		
 	 <?php 
-$args = array('posts_per_page' => -1,);
+$args = array('posts_per_page' => 10, 'offset' => 3);
 $query = new WP_Query( $args );?>
  <?php if ( have_posts ) : ?>
 			<?php while( $query->have_posts()) : $query->the_post();?>
 				<a href="<?php the_permalink(); ?>">
 				<div class="blog-item">
 					<div class="img-card">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/card2.png">
+							<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+								</a>
 					</div>
 					<div class="text-card_blog">
 						<?php the_category()?>
-						<h3><?php the_title() ?> </h3>
-						<?php the_excerpt() ?>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title() ?> </h3></a>
+						<a href="<?php the_permalink(); ?>"><p>
+							<?php the_excerpt() ?>
+							</p>
+						</a>
 					</div>
 				</div>
 					</a>
@@ -143,9 +151,10 @@ $query = new WP_Query( $args );?>
 			
 			
 			</div>
-			<div class="" style="margin-top: 2%;">
+		  <div class="content-education" style="margin: 0 0 2rem 0">
 				<a class="btn_custom2" href="#">LOAD MORE</a>
 			</div>
+		 
 		</div>
 	</div>
 	
@@ -163,12 +172,6 @@ $query = new WP_Query( $args );?>
 
 
 
-
-
-<?php 
-	$lang = get_bloginfo('language');
-	if( $lang == 'es-CO'): ?>
-	 <!-- ESPAÑOL -->
 <section class="free">
 
 <div class="mancha6">
@@ -177,33 +180,36 @@ $query = new WP_Query( $args );?>
 <div class="mancha5">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mancha5.png" alt="">
 </div>
-<h4> Quieres un mes gratis de contabilidad?</h4>
+	
+	  <?php $args = array('post_type' => 'Banner suscripcion'); ?>
+    <?php $loop = new WP_Query($args); ?>
+    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+		<h4> <?php the_title(); ?></h4>
 
-<p> Suscríbete a Due Diligence. Haremos un mes gratis de tu contabilidad y prepararemos un conjunto de estados financieros para que los conserves.</p>
+		<p> <?php the_content(); ?></p>
 
-<div class="" style="margin-top: 2%;">
-<a class="btn_custom2" href="#">EMPEZAR</a>
-</div>
+		<div class="" style="margin-top: 2%;">
+		
+					<?php if ( get_field( 'select_type_button' ) == 1 ) : ?>
+							<?php $popup_suscripbe = get_field( 'popup-suscripbe' ); ?>
+							<?php if ( $popup_suscripbe ) : ?>
+								<a class="btn_custom2 btn-open-modal" data-toggle="modal"  href="<?php echo esc_url( $popup_suscripbe['url'] ); ?>" target="<?php echo esc_attr( $popup_suscripbe['target'] ); ?>"><?php echo esc_html( $popup_suscripbe['title'] ); ?></a>
+							<?php endif; ?>
+
+					<?php else : ?>
+			
+						<?php $link_suscripbe = get_field( 'link-suscripbe' ); ?>
+							<?php if ( $link_suscripbe ) : ?>
+								<a class="btn_custom2"  href="<?php echo esc_url( $link_suscripbe['url'] ); ?>" target="<?php echo esc_attr( $link_suscripbe['target'] ); ?>"><?php echo esc_html( $link_suscripbe['title'] ); ?></a>
+							<?php endif; ?>
+
+					<?php endif; ?>
+		</div>
+	
+	 <?php endwhile; ?>
+	
 </section>
-<?php else: ?>
-		 <!-- INGLES-->	
-<section class="free">
-
-<div class="mancha6">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mancha6.png" alt="">
-</div>
-<div class="mancha5">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mancha5.png" alt="">
-</div>
-<h4> Want a free month of Accounting?</h4>
-
-<p>Subscribe to Due Diligence. We'll done one a free month of your bookkeeping and prepare a set of financial statements for you to keep. </p>
-
-<div class="" style="margin-top: 2%;">
-<a class="btn_custom2" href="#">GET STARTED</a>
-</div>
-</section>
- <?php endif; ?>     
+     
 
 
 	
